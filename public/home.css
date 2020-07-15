@@ -1,0 +1,69 @@
+
+/*=== Hilights ===*/
+
+.highlights {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background: #FBDFDB;
+    border-radius: 30px;
+}
+.highlights .text {
+    justify-self: center;
+    width: 320px;
+    padding-left: 60px;
+    align-self: center;
+}
+
+.highlights .text h1 {
+    margin-bottom: 10px;
+    font-size: 32px;
+    line-height: 38px;
+}
+
+.highlights .text p {
+    opacity: 0.7;
+    font-size: 18px;
+    line-height: 28px;
+}
+
+.highlights img {
+   justify-self: center;
+   padding-top: 66px;
+}
+
+/*=== Cards === */
+
+main {
+    margin-top: 40px;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+}
+
+
+.cards .card-image-container img {
+    border-radius: 15px;
+    width: 300px;
+    height: 140px;
+}
+
+.cards .card-info {
+    font-size: 18px;
+}
+
+.cards .creator {
+    cursor: pointer;
+}
+
+.cards .index{
+    visibility: hidden;
+}
+
+
+
+
+
+

@@ -1,0 +1,1 @@
+const change = document.querySelector

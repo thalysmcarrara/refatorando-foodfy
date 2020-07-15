@@ -1,0 +1,53 @@
+{% extends "layout.njk" %}
+
+{% block header %}
+    <link rel="stylesheet" href="/modal.css">
+{% endblock %}
+
+{% block content %}
+    <img src="{{data.image}}" alt="{{data.title}}">
+    <div class="titleContent">
+        <h1>{{data.title}}</h1>
+        <p>por {{data.author}}</p>
+    </div>
+    
+    <div class="subTitleContent">
+        <h2>Ingredientes</h2>
+        <p class="visible">MOSTRAR</p>
+    </div>
+    
+    <div class="list">
+        <ul>
+            {% for item in data.ingredients%}
+                <li>{{item}}</li>
+            {% endfor %}
+        </ul>
+    </div>
+
+    
+    
+    <div class="subTitleContent">
+        <h2>Modo de preparo</h2>
+        <p class="visible">MOSTRAR</p>
+    </div>
+    
+    <div class="list">
+        <ul>
+            {% for item in data.preparation%}
+                <li>{{item}}</li>
+            {% endfor %}
+        </ul>
+    </div>
+    
+    <div class="subTitleContent">
+        <h2>Informações adicionais</h2>
+        <p class="visible">MOSTRAR</p>
+    </div>
+    
+    <div class="list">
+        <p>{{data.information}}</p>
+    </div>
+
+    
+
+{% endblock %}

@@ -1,0 +1,50 @@
+@import "https://fonts.googleapis.com/css2?family=Roboto&display=swap";
+@import "https://fonts.googleapis.com/css2?family=Lobster&display=swap";
+
+* {
+    margin: 0;
+}
+
+:root {
+    --text-header: #111111;
+}
+
+body{
+    background-color: #FFF0EA;
+    font-family: 'Roboto', sans-serif;
+    color: var(--text-header);
+}
+
+.wrapper {
+    max-width: 940px;
+    margin: 0 auto;
+}
+
+/*=== Header ===*/
+
+header {
+      margin: 32px auto;
+      display: grid;
+      grid-template-columns: 210px 1fr;
+      align-items: center;
+}
+
+.menu a {
+    font-size: 16px;
+    color: var(--text-header);
+    margin-right: 30px;
+    text-decoration: none;
+}
+
+/*=== footer ===*/
+
+footer{
+    background-color: #EEEEEE;
+    color: #999999;
+    text-align: center; 
+    margin: 60px auto 0 auto;
+    font-size: 14px;
+    padding: 23px 0;
+    width: 100%;
+ }
+
