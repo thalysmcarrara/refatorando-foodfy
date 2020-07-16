@@ -54,9 +54,32 @@ li {
 .list {
     visibility: hidden;
     height: 0;
-    width: 0;
+
 }
 
-.visible {
+.list.active {
     visibility: visible;
+    height: auto;
+}
+
+.container.info {
+    height: auto;
+}
+
+.list.ingredients p {
+    font-size: 18px;
+    color: #444444;
+    line-height: 28px;
+}
+
+.list.preparation p {
+    font-size: 18px;
+    color: #444444;
+    line-height: 28px;
+}
+
+.list.info p {
+    font-size: 18px;
+    color: #444444;
+    line-height: 28px;
 }

@@ -13,6 +13,7 @@ body{
     background-color: #FFF0EA;
     font-family: 'Roboto', sans-serif;
     color: var(--text-header);
+    height: "";
 }
 
 .wrapper {

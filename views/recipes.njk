@@ -9,17 +9,18 @@
             <section class="cards">
                 
                 {% for card in data %}
-                <div class="card">
-                    <div class="card-image-container">
-                        <img src="{{card.image}}" alt="{{card.title}}">
+                    <div class="card">
+                        <div class="card-image-container">
+                            <img src="{{card.image}}" alt="{{card.title}}">
+                        </div>
+                        <div class="card-info">
+                            <p>{{card.title}}</p>
+                        </div>
+                        <div class="creator">
+                            <p>{{card.author}}</p>
+                        </div>
+                        <div id="{{card.index}}" class="index"></div>
                     </div>
-                    <div class="card-info">
-                        <p>{{card.title}}</p>
-                    </div>
-                    <div class="creator">
-                        <p>{{card.author}}</p>
-                    </div>
-                </div>
                 {% endfor %}
             
             </section>
@@ -29,14 +30,3 @@
     {% endblock %}
 
 
-    <div class="modal">
-        <div class="modal-overlay">
-            <div class="img-container">
-                <img src="/myFoodFy/assets/asinhas.png" alt="asinhas de frango ao barbecaue">
-            </div>
-            <h1>Asinhas de frango ao barbecue</h1>
-            <p>por Vania Steroski</p>
-            <a>Fechar modal</a>
-        </div>
-    </div>
-    

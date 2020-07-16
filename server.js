@@ -18,6 +18,7 @@ nunjucks.configure('views',
 server.use(express.static('public'))
 
 server.get("/",function(req,res){
+    console.log()
     const dataCards = []
     for(let i = 0; i < 6; i++){
         dataCards.push(data[i])
@@ -31,7 +32,14 @@ server.get("/about",function(req,res){
 })
 
 server.get("/recipes",function(req,res){
-    return res.render('recipes',{data})
+    const indexedData = []
+
+    for(let i = 0; i < data.length; i++){
+        indexedData.push(data[i])
+        indexedData[i]["index"] = i
+    }
+
+    return res.render('recipes',{data:indexedData})
 })
 
 server.get("/:id", function(req,res){
@@ -40,5 +48,13 @@ server.get("/:id", function(req,res){
     console.log(index)
     return res.render("modal",{data: filterData})
 })
+
+server.get("/recipes/:id", function(req,res){
+    const index = req.params.id
+    const filterData = data[index]
+    console.log(index)
+    return res.render("modal",{data: filterData})
+})
+
 
 server.listen(5000,function(){})
